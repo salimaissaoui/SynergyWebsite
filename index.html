@@ -1,174 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Synergy Conversion - Sustainable Waste Management</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Synergy Conversion - PFAS Remediation Solutions</title>
 
-    <!-- Import Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Import Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
 
-    <!-- Link to CSS File -->
-    <link rel="stylesheet" href="css/style.css" />
+  <!-- Link to CSS File -->
+  <link rel="stylesheet" href="css/style.css" />
 
-    <script src="js/app.js" defer></script>
-  </head>
-  <body>
-    <!-- Header Section -->
-    <header class="main-header" role="banner">
-      <div class="container">
-        <div class="logo">
-          <img
-            src="image.png"
-            alt="Synergy Conversion Logo"
-            aria-label="Company logo: Synergy Conversion"
+  <!-- Include External Libraries -->
+  <!-- Tilt.js for 3D hover effects -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <!-- Particles.js for particle background -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- ScrollReveal.js for scroll animations -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="main-header" role="banner">
+    <div class="container">
+      <div class="logo">
+        <img
+          src="image.png"
+          alt="Synergy Conversion Logo"
+          aria-label="Company logo: Synergy Conversion"
+        />
+      </div>
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul role="menu">
+          <li role="none"><a role="menuitem" href="#introduction">Introduction</a></li>
+          <li role="none"><a role="menuitem" href="#pfas">About PFAS</a></li>
+          <li role="none"><a role="menuitem" href="#industries">Industries</a></li>
+          <li role="none"><a role="menuitem" href="#process">Our Process</a></li>
+          <li role="none"><a role="menuitem" href="#technologies">Technologies</a></li>
+          <li role="none"><a role="menuitem" href="#vision">Our Vision</a></li>
+          <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" role="region" aria-label="Hero section with introduction and call to action">
+    <div id="particles-js"></div>
+    <div class="hover-effect-container">
+      <img src="images/hero-default.jpg" alt="Hero Background" class="default-image">
+      <img src="images/hero-hover.jpg" alt="Alternate Hero Background" class="hover-image">
+    </div>
+    <div class="hero-content">
+      <h1>Comprehensive PFAS Remediation Solutions</h1>
+      <p class="typewriter"><span id="typewriter-text"></span></p>
+      <a href="#contact" class="cta-btn" role="button">Get Started</a>
+    </div>
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">&darr;</div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section
+    id="introduction"
+    class="about-us animated"
+    role="region"
+    aria-labelledby="introduction-heading"
+  >
+    <div class="container">
+      <h2 id="introduction-heading">About Synergy Conversion</h2>
+      <div class="about-content">
+        <p>
+          We integrate cutting-edge technologies and expertise to tackle environmental challenges effectively.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About PFAS Section -->
+  <section
+    id="pfas"
+    class="services"
+    role="region"
+    aria-labelledby="pfas-heading"
+  >
+  <div class="container">
+    <h2 id="pfas-heading">What is PFAS?</h2>
+    <div class="service-item tilt" data-tilt data-tilt-max="15" style="position: relative; width: 350px;">
+      <img src="images/pfass.jpg" alt="PFAS Chemicals" style="width: 100%; height: auto;" />
+      <div class="service-content">
+        <p>
+          PFAS are synthetic chemicals used in various industries due to their resistance to water, grease, and heat.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  
+  </section>
+
+  <!-- Industries Affected Section -->
+  <section
+    id="industries"
+    class="industries-section animated"
+    role="region"
+    aria-labelledby="industries-heading"
+  >
+    <div class="container">
+      <h2 id="industries-heading">Industries We Serve</h2>
+      <div class="industries-grid">
+        <div class="industry-item tilt" data-tilt data-tilt-max="15">
+          <img src="images/industry1.jpg" alt="Industrial Manufacturing" />
+          <h3>Manufacturing</h3>
+        </div>
+        <div class="industry-item tilt" data-tilt data-tilt-max="15">
+          <img src="images/industry2.jpg" alt="Airports" />
+          <h3>Airports</h3>
+        </div>
+        <div class="industry-item tilt" data-tilt data-tilt-max="15">
+          <img src="images/industry3.jpg" alt="Military Bases" />
+          <h3>Military Bases</h3>
+        </div>
+        <div class="industry-item tilt" data-tilt data-tilt-max="15">
+          <img src="images/industry4.jpg" alt="Landfills" />
+          <h3>Landfills</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Process Section -->
+  <section
+    id="process"
+    class="process-section animated"
+    role="region"
+    aria-labelledby="process-heading"
+  >
+    <div class="container">
+      <h2 id="process-heading">Our Process</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <img src="images/step1.jpg" alt="Site Assessment" />
+          <h3>Assessment</h3>
+        </div>
+        <div class="process-step">
+          <img src="images/step2.jpg" alt="Solution Design" />
+          <h3>Design</h3>
+        </div>
+        <div class="process-step">
+          <img src="images/step3.jpg" alt="Implementation" />
+          <h3>Implementation</h3>
+        </div>
+        <div class="process-step">
+          <img src="images/step4.jpg" alt="Monitoring" />
+          <h3>Monitoring</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section
+    id="technologies"
+    class="technologies-section animated"
+    role="region"
+    aria-labelledby="technologies-heading"
+  >
+    <div class="container">
+      <h2 id="technologies-heading">Technologies We Use</h2>
+      <div class="technologies-grid">
+        <div class="technology-item tilt" data-tilt data-tilt-max="15">
+          <img src="images/tech1.jpg" alt="Advanced Filtration" />
+          <h3>Advanced Filtration</h3>
+        </div>
+        <div class="technology-item tilt" data-tilt data-tilt-max="15">
+          <img src="images/tech2.jpg" alt="Chemical Treatments" />
+          <h3>Chemical Treatments</h3>
+        </div>
+        <div class="technology-item tilt" data-tilt data-tilt-max="15">
+          <img src="images/tech3.jpg" alt="Bioremediation" />
+          <h3>Bioremediation</h3>
+        </div>
+        <div class="technology-item tilt" data-tilt data-tilt-max="15">
+          <img src="images/tech4.jpg" alt="Thermal Desorption" />
+          <h3>Thermal Desorption</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Vision Section -->
+  <section
+    id="vision"
+    class="vision-section animated"
+    role="region"
+    aria-labelledby="vision-heading"
+  >
+    <div class="container">
+      <h2 id="vision-heading">Our Vision</h2>
+      <div class="vision-content">
+        <p>
+          Committed to a cleaner environment through innovative solutions for future generations.
+        </p>
+        <img src="images/vision.jpg" alt="Our Vision" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section
+    id="contact"
+    class="contact"
+    role="region"
+    aria-labelledby="contact-heading"
+  >
+    <div class="container">
+      <h2 id="contact-heading">Get in Touch</h2>
+      <div class="contact-info">
+        <p>Ready to make a change? Let's talk.</p>
+      </div>
+      <form
+        action="/submit"
+        method="post"
+        aria-labelledby="contact-form"
+        role="form"
+      >
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            aria-required="true"
           />
         </div>
-        <nav class="main-nav" aria-label="Main navigation">
-          <ul role="menu">
-            <li role="none"><a role="menuitem" href="#about">About Us</a></li>
-            <li role="none">
-              <a role="menuitem" href="#services">Services</a>
-            </li>
-            <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section
-      class="hero"
-      role="region"
-      aria-label="Hero section with introduction and call to action"
-      style="
-        background-image: url('https://images.pexels.com/photos/4218887/pexels-photo-4218887.jpeg');
-        background-size: cover;
-        background-position: center;
-      "
-    >
-      <div class="container">
-        <h1>Reliable & Sustainable Waste Management Services</h1>
-        <p>We provide sustainable waste management solutions across Ontario.</p>
-        <a href="#contact" class="cta-btn" role="button">Get a Quote</a>
-      </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section
-      id="about"
-      class="about-us"
-      role="region"
-      aria-labelledby="about-heading"
-    >
-      <div class="container">
-        <h2 id="about-heading">About Us</h2>
-        <div class="about-content">
-          <p>
-            At Synergy Conversion, we strive to create a sustainable future by
-            providing innovative waste management solutions. Our vision is to
-            reduce the environmental footprint by focusing on efficient
-            recycling and eco-friendly processes.
-          </p>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            aria-required="true"
+          />
         </div>
-      </div>
-    </section>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            aria-required="true"
+          ></textarea>
+        </div>
+        <button type="submit" class="submit-btn" role="button">Submit</button>
+      </form>
+    </div>
+  </section>
 
-    <!-- Services Section -->
-    <section
-      id="services"
-      class="services"
-      role="region"
-      aria-labelledby="services-heading"
-    >
-      <div class="container">
-        <h2 id="services-heading">Our Services</h2>
-        <div class="service-item" aria-labelledby="service1-heading">
-          <h3 id="service1-heading">Waste Collection</h3>
-          <p>
-            Efficient waste collection services for residential and commercial
-            clients.
-          </p>
-        </div>
-        <div class="service-item" aria-labelledby="service2-heading">
-          <h3 id="service2-heading">Recycling</h3>
-          <p>
-            Eco-friendly recycling solutions for reducing your environmental
-            footprint.
-          </p>
-        </div>
-        <div class="service-item" aria-labelledby="service3-heading">
-          <h3 id="service3-heading">Composting</h3>
-          <p>
-            Innovative composting methods to turn organic waste into useful
-            resources.
-          </p>
-        </div>
-      </div>
-    </section>
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top">↑</a>
 
-    <!-- Contact Section -->
-    <section
-      id="contact"
-      class="contact"
-      role="region"
-      aria-labelledby="contact-heading"
-    >
-      <div class="container">
-        <h2 id="contact-heading">Contact Us</h2>
-        <div class="contact-info">
-          <p>Contact us today to get started on your sustainable journey.</p>
-        </div>
-        <form
-          action="/submit"
-          method="post"
-          aria-labelledby="contact-form"
-          role="form"
-        >
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              aria-required="true"
-            />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              aria-required="true"
-            />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              required
-              aria-required="true"
-            ></textarea>
-          </div>
-          <button type="submit" class="submit-btn" role="button">Submit</button>
-        </form>
-      </div>
-    </section>
+  <!-- Footer Section -->
+  <footer class="main-footer" role="contentinfo">
+    <div class="container">
+      <nav aria-label="Footer navigation">
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#pfas">About PFAS</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#technologies">Technologies</a></li>
+          <li><a href="#vision">Our Vision</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2024 Synergy Conversion. All Rights Reserved.</p>
+    </div>
+  </footer>
 
-    <!-- Footer Section -->
-    <footer class="main-footer" role="contentinfo">
-      <div class="container">
-        <p>&copy; 2024 Synergy Conversion. All Rights Reserved.</p>
-      </div>
-    </footer>
-  </body>
+  <!-- Include JavaScript File -->
+  <script src="js/app.js"></script>
+
+</body>
 </html>

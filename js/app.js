@@ -1,83 +1,248 @@
-// Smooth Scrolling for Navigation Links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
+// Utility function for DOM element selection
+const select = (selector) => document.querySelector(selector);
+const selectAll = (selector) => document.querySelectorAll(selector);
 
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
+// Debounce function for performance optimization
+const debounce = (func, delay) => {
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => func(...args), delay);
+  };
+};
+
+// Sticky Header on Scroll
+const handleScroll = debounce(() => {
+  const header = select('.main-header');
+  header.classList.toggle('scrolled', window.scrollY > 50);
+  
+  const backToTopBtn = select('.back-to-top');
+  backToTopBtn.classList.toggle('show-back-to-top', window.scrollY > 500);
+}, 100);
+
+window.addEventListener('scroll', handleScroll);
+
+// Responsive Navigation Menu
+const navToggle = select('.nav-toggle');
+const mainNav = select('.main-nav');
+
+navToggle.addEventListener('click', () => {
+  mainNav.classList.toggle('active');
+  navToggle.classList.toggle('active');
+});
+
+// Smooth Scroll for Anchor Links
+const smoothScroll = (targetId) => {
+  const targetSection = select(targetId);
+  targetSection.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+};
+
+selectAll('.main-nav a[href^="#"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href');
+    smoothScroll(targetId);
+    
+    // Close mobile menu after click
+    mainNav.classList.remove('active');
+    navToggle.classList.remove('active');
   });
 });
 
-// Form Validation
-document.querySelector("form").addEventListener("submit", function (e) {
-  const name = document.getElementById("name");
-  const email = document.getElementById("email");
-  const message = document.getElementById("message");
-  let formIsValid = true;
+// Typewriter Effect with Multiple Sentences
+const typewriterEffect = (element, texts, speed = 100, pause = 2000) => {
+  let textIndex = 0;  // Track the current sentence index
+  let charIndex = 0;  // Track the current character index
 
-  if (!name.value.trim()) {
-    formIsValid = false;
-    alert("Please enter your name.");
-  }
+  const type = () => {
+    if (charIndex <= texts[textIndex].length) {
+      // Display characters one by one
+      element.textContent = texts[textIndex].substring(0, charIndex);
+      charIndex++;
+      setTimeout(type, speed);
+    } else {
+      // Pause before deleting the text
+      setTimeout(deleteText, pause);
+    }
+  };
 
-  if (!email.value.trim() || !validateEmail(email.value)) {
-    formIsValid = false;
-    alert("Please enter a valid email address.");
-  }
+  const deleteText = () => {
+    if (charIndex > 0) {
+      // Delete characters one by one
+      element.textContent = texts[textIndex].substring(0, charIndex);
+      charIndex--;
+      setTimeout(deleteText, speed / 2);
+    } else {
+      // Move to the next sentence
+      textIndex = (textIndex + 1) % texts.length;  // Loop back to the start
+      setTimeout(type, speed);
+    }
+  };
 
-  if (!message.value.trim()) {
-    formIsValid = false;
-    alert("Please enter a message.");
-  }
+  type();
+};
 
-  if (!formIsValid) {
-    e.preventDefault(); // Stop form from submitting
-  }
+const typewriterText = select('#typewriter-text');
+typewriterEffect(typewriterText, [
+  "Creating a cleaner environment for future generations.",
+  "Innovative solutions for a sustainable future.",
+  "Committed to tackling environmental challenges.",
+  "Empowering industries with PFAS remediation."
+]);
+
+
+// Initialize Tilt.js
+VanillaTilt.init(selectAll(".tilt"), {
+  max: 15,
+  speed: 400,
+  glare: true,
+  "max-glare": 0.2,
 });
 
-// Email Validation Function
-function validateEmail(email) {
-  const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-  return re.test(String(email).toLowerCase());
-}
+// Circular Reveal Effect
+const addCircularRevealEffect = (containerSelector, radius = 150) => {
+  const hoverContainer = select(containerSelector);
+  if (!hoverContainer) return;
 
-// Sticky Navigation Bar
-window.addEventListener("scroll", function () {
-  const header = document.querySelector(".main-header");
-  const hero = document.querySelector(".hero");
-  const sticky = hero.offsetHeight;
+  const hoverImage = hoverContainer.querySelector('.hover-image');
+  if (!hoverImage) return;
 
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
+  const handleMouseMove = (e) => {
+    const rect = hoverContainer.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    hoverImage.style.clipPath = `circle(${radius}px at ${x}px ${y}px)`;
+  };
+
+  const handleMouseLeave = () => {
+    hoverImage.style.clipPath = 'circle(0% at 0 0)';
+  };
+
+  hoverContainer.addEventListener('mousemove', handleMouseMove);
+  hoverContainer.addEventListener('mouseleave', handleMouseLeave);
+};
+
+addCircularRevealEffect('.hover-effect-container');
+
+particlesJS('particles-js', {
+  particles: {
+    number: {
+      value: 150,  // Increase particle count for a denser effect
+      density: {
+        enable: true,
+        value_area: 800  // Keep density area to avoid overcrowding
+      }
+    },
+    color: {
+      value: ["#2a5d41", "#ff6f61", "#f4d35e", "#4a4a4a"]  // Multi-color particles for a vibrant effect
+    },
+    shape: {
+      type: ["circle", "triangle", "edge"],  // Add variety to particle shapes
+      stroke: {
+        width: 0
+      }
+    },
+    opacity: {
+      value: 0.5,
+      random: true,  // Random opacity for depth effect
+      anim: {
+        enable: true,
+        speed: 0.5,
+        opacity_min: 0.1,
+        sync: false
+      }
+    },
+    size: {
+      value: 4,
+      random: true,  // Random size for added visual interest
+      anim: {
+        enable: true,
+        speed: 2,
+        size_min: 0.3,
+        sync: false
+      }
+    },
+    line_linked: {
+      enable: true,
+      distance: 120,  // Shorter links for a tighter effect
+      color: "#c3c3c3",
+      opacity: 0.3,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 2,  // Faster movement speed for a more dynamic feel
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+      attract: {
+        enable: true,
+        rotateX: 600,
+        rotateY: 1200
+      }
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: ["grab", "bubble"],  // Hover effects to engage users
+        parallax: {
+          enable: true,
+          force: 60,
+          smooth: 10
+        }
+      },
+      onclick: {
+        enable: true,
+        mode: "repulse"  // Repulse effect on click for interactivity
+      },
+      resize: true
+    },
+    modes: {
+      grab: {
+        distance: 200,
+        line_linked: {
+          opacity: 0.5
+        }
+      },
+      bubble: {
+        distance: 150,
+        size: 10,
+        duration: 2,
+        opacity: 0.8,
+        speed: 3
+      },
+      repulse: {
+        distance: 200,
+        duration: 0.4
+      }
+    }
+  },
+  retina_detect: true
 });
 
-const hero = document.querySelector(".hero");
-const reveal = document.createElement("div");
-reveal.classList.add("hover-reveal");
-hero.appendChild(reveal);
 
-let clipPathPositions = []; // Store all previous hover areas
-let currentClipPath = ""; // Track the current mouse hover area
+// Scroll Reveal Animations
+const sr = ScrollReveal();
 
-// Add event listener for mousemove to track the cursor's position
-hero.addEventListener("mousemove", function (e) {
-  const rect = hero.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-
-  // Store the current circle's position based on the mouse move
-  currentClipPath = `circle(15% at ${x}px ${y}px)`;
-
-  // Join the current hover area with previously hovered areas
-  reveal.style.clipPath = [...clipPathPositions, currentClipPath].join(", ");
+sr.reveal('.tilt', {
+  delay: 100,
+  distance: '50px',
+  easing: 'ease-in-out',
+  origin: 'bottom',
+  interval: 100
 });
 
-// Store the position permanently when the user clicks
-hero.addEventListener("click", function () {
-  // Add the current hover area to the list of permanently visible clip paths
-  clipPathPositions.push(currentClipPath);
+sr.reveal('.about-us, .vision-section', {
+  delay: 200,
+  distance: '50px',
+  easing: 'ease-in-out',
+  origin: 'bottom',
 });

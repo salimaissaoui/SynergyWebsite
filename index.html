@@ -1,299 +1,644 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Synergy Conversion - PFAS Remediation Solutions</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synergy Conversion - PFAS Remediation Solutions</title>
 
-  <!-- Import Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-    rel="stylesheet"
-  />
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Link to CSS File -->
-  <link rel="stylesheet" href="css/style.css" />
+    <!-- Link to CSS File -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Include External Libraries -->
+    <!-- Tilt.js for 3D hover effects -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
+      defer
+    ></script>
+    <!-- Particles.js for particle background -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
+      defer
+    ></script>
+    <!-- ScrollReveal.js for scroll animations -->
+    <script src="https://unpkg.com/scrollreveal" defer></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <!-- Include JavaScript File -->
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="main-header" role="banner">
+      <div class="container">
+        <div class="logo">
+          <img
+            src="image.png"
+            alt="Synergy Conversion Logo"
+            aria-label="Company logo: Synergy Conversion"
+          />
+        </div>
+        <div class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <ul role="menu">
+            <li role="none">
+              <a role="menuitem" href="#introduction">Introduction</a>
+            </li>
+            <li role="none"><a role="menuitem" href="#pfas">About PFAS</a></li>
+            <li role="none">
+              <a role="menuitem" href="#industries">Industries</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#exposure">Exposure</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#process">Our Process</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#technologies">Technologies</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#protection">How We Protect You</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#vision">Our Vision</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#conclusion">Conclusion</a>
+            </li>
+            <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <!-- Include External Libraries -->
-  <!-- Tilt.js for 3D hover effects -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-  <!-- Particles.js for particle background -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <!-- ScrollReveal.js for scroll animations -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-
-</head>
-<body>
-
-  <!-- Header Section -->
-  <header class="main-header" role="banner">
-    <div class="container">
-      <div class="logo">
+    <!-- Hero Section -->
+    <section
+      class="hero"
+      role="region"
+      aria-label="Hero section with introduction and call to action"
+    >
+      <!-- Particle Background -->
+      <div id="particles-js"></div>
+      <!-- Hero Background Image with Hover Effect -->
+      <div class="hover-effect-container">
         <img
-          src="image.png"
-          alt="Synergy Conversion Logo"
-          aria-label="Company logo: Synergy Conversion"
+          src="https://images.unsplash.com/photo-1532153665699-24f5b07f2ce3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGVudmlyb25tZW50fGVufDB8fHx8MTY5NjYxMDM1OQ&ixlib=rb-4.0.3&q=80&w=1600"
+          alt="Hero Background"
+          class="default-image"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1504593811423-6dd665756598?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5fGVufDB8fHx8MTY5NjYxMDQ0Mw&ixlib=rb-4.0.3&q=80&w=1600"
+          alt="Alternate Hero Background"
+          class="hover-image"
         />
       </div>
-      <div class="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="hero-content">
+        <h1>Comprehensive PFAS Remediation Solutions</h1>
+        <p class="typewriter"><span id="typewriter-text"></span></p>
+        <a href="#contact" class="cta-btn" role="button">Get Started</a>
       </div>
-      <nav class="main-nav" aria-label="Main navigation">
-        <ul role="menu">
-          <li role="none"><a role="menuitem" href="#introduction">Introduction</a></li>
-          <li role="none"><a role="menuitem" href="#pfas">About PFAS</a></li>
-          <li role="none"><a role="menuitem" href="#industries">Industries</a></li>
-          <li role="none"><a role="menuitem" href="#process">Our Process</a></li>
-          <li role="none"><a role="menuitem" href="#technologies">Technologies</a></li>
-          <li role="none"><a role="menuitem" href="#vision">Our Vision</a></li>
-          <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">&darr;</div>
+    </section>
 
-  <!-- Hero Section -->
-  <section class="hero" role="region" aria-label="Hero section with introduction and call to action">
-    <div id="particles-js"></div>
-    <div class="hover-effect-container">
-      <img src="images/hero-default.jpg" alt="Hero Background" class="default-image">
-      <img src="images/hero-hover.jpg" alt="Alternate Hero Background" class="hover-image">
-    </div>
-    <div class="hero-content">
-      <h1>Comprehensive PFAS Remediation Solutions</h1>
-      <p class="typewriter"><span id="typewriter-text"></span></p>
-      <a href="#contact" class="cta-btn" role="button">Get Started</a>
-    </div>
-    <!-- Scroll Indicator -->
-    <div class="scroll-indicator">&darr;</div>
-  </section>
-
-  <!-- Introduction Section -->
-  <section
-    id="introduction"
-    class="about-us animated"
-    role="region"
-    aria-labelledby="introduction-heading"
-  >
-    <div class="container">
-      <h2 id="introduction-heading">About Synergy Conversion</h2>
-      <div class="about-content">
-        <p>
-          We integrate cutting-edge technologies and expertise to tackle environmental challenges effectively.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- About PFAS Section -->
-  <section
-    id="pfas"
-    class="services"
-    role="region"
-    aria-labelledby="pfas-heading"
-  >
-  <div class="container">
-    <h2 id="pfas-heading">What is PFAS?</h2>
-    <div class="service-item tilt" data-tilt data-tilt-max="15" style="position: relative; width: 350px;">
-      <img src="images/pfass.jpg" alt="PFAS Chemicals" style="width: 100%; height: auto;" />
-      <div class="service-content">
-        <p>
-          PFAS are synthetic chemicals used in various industries due to their resistance to water, grease, and heat.
-        </p>
-      </div>
-    </div>
-  </div>
-  
-  
-  </section>
-
-  <!-- Industries Affected Section -->
-  <section
-    id="industries"
-    class="industries-section animated"
-    role="region"
-    aria-labelledby="industries-heading"
-  >
-    <div class="container">
-      <h2 id="industries-heading">Industries We Serve</h2>
-      <div class="industries-grid">
-        <div class="industry-item tilt" data-tilt data-tilt-max="15">
-          <img src="images/industry1.jpg" alt="Industrial Manufacturing" />
-          <h3>Manufacturing</h3>
-        </div>
-        <div class="industry-item tilt" data-tilt data-tilt-max="15">
-          <img src="images/industry2.jpg" alt="Airports" />
-          <h3>Airports</h3>
-        </div>
-        <div class="industry-item tilt" data-tilt data-tilt-max="15">
-          <img src="images/industry3.jpg" alt="Military Bases" />
-          <h3>Military Bases</h3>
-        </div>
-        <div class="industry-item tilt" data-tilt data-tilt-max="15">
-          <img src="images/industry4.jpg" alt="Landfills" />
-          <h3>Landfills</h3>
+    <!-- Introduction Section -->
+    <section
+      id="introduction"
+      class="intro-pfas-section"
+      role="region"
+      aria-labelledby="introduction-heading"
+    >
+      <div class="container">
+        <h2 id="introduction-heading">Introduction to Synergy Conversion</h2>
+        <div class="content">
+          <p>
+            The term <strong>“synergy”</strong> refers to the powerful effect
+            created when two or more entities work together, producing results
+            that exceed the sum of their individual efforts. At Synergy
+            Conversion, we embody this principle by integrating multiple
+            cutting-edge technologies and leveraging the expertise of diverse
+            professionals.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Our Process Section -->
-  <section
-    id="process"
-    class="process-section animated"
-    role="region"
-    aria-labelledby="process-heading"
-  >
-    <div class="container">
-      <h2 id="process-heading">Our Process</h2>
-      <div class="process-steps">
-        <div class="process-step">
-          <img src="images/step1.jpg" alt="Site Assessment" />
-          <h3>Assessment</h3>
-        </div>
-        <div class="process-step">
-          <img src="images/step2.jpg" alt="Solution Design" />
-          <h3>Design</h3>
-        </div>
-        <div class="process-step">
-          <img src="images/step3.jpg" alt="Implementation" />
-          <h3>Implementation</h3>
-        </div>
-        <div class="process-step">
-          <img src="images/step4.jpg" alt="Monitoring" />
-          <h3>Monitoring</h3>
+    <!-- PFAS Section -->
+    <section
+      id="pfas"
+      class="intro-pfas-section"
+      role="region"
+      aria-labelledby="pfas-heading"
+    >
+      <div class="container">
+        <h2 id="pfas-heading">Brief Introduction to PFAS</h2>
+        <div class="pfas-content">
+          <div class="pfas-text">
+            <p>
+              <strong>Per- and polyfluoroalkyl substances (PFAS)</strong> are a
+              class of synthetic chemicals widely used in industrial
+              applications due to their resistance to water, grease, and heat.
+              Among the most well-known PFAS compounds are Perfluorooctane
+              Sulfonate (PFOS) and Perfluorooctanoic Acid (PFOA).
+            </p>
+            <div class="icon-text-grid">
+              <div class="icon-text-item">
+                <img
+                  src="images/premium_photo-1683133356589-9156010f4fa5.avif"
+                  alt="PFOS Icon"
+                />
+                <p>
+                  <strong>PFOS:</strong> Used in firefighting foams and
+                  water-resistant coatings
+                </p>
+              </div>
+              <div class="icon-text-item">
+                <img
+                  src="images/rob-wicks-htMa9KPui1I-unsplash.jpg"
+                  alt="PFOA Icon"
+                />
+                <p>
+                  <strong>PFOA:</strong> Key component in non-stick cookware
+                  like Teflon
+                </p>
+              </div>
+            </div>
+            <p>
+              There are more than <strong>12,000</strong> different variants of
+              PFAS.
+            </p>
+          </div>
+          <div class="pfas-image">
+            <img
+              src="https://images.unsplash.com/photo-1581091870629-1c4ae1d56d46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxjaGVtaWNhbCUyMHN0cnVjdHVyZXxlbnwwfHx8fDE2OTY2MTA3NjU&ixlib=rb-4.0.3&q=80&w=600"
+              alt="PFAS Chemical Structure Diagram"
+            />
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Technologies Section -->
-  <section
-    id="technologies"
-    class="technologies-section animated"
-    role="region"
-    aria-labelledby="technologies-heading"
-  >
-    <div class="container">
-      <h2 id="technologies-heading">Technologies We Use</h2>
-      <div class="technologies-grid">
-        <div class="technology-item tilt" data-tilt data-tilt-max="15">
-          <img src="images/tech1.jpg" alt="Advanced Filtration" />
-          <h3>Advanced Filtration</h3>
-        </div>
-        <div class="technology-item tilt" data-tilt data-tilt-max="15">
-          <img src="images/tech2.jpg" alt="Chemical Treatments" />
-          <h3>Chemical Treatments</h3>
-        </div>
-        <div class="technology-item tilt" data-tilt data-tilt-max="15">
-          <img src="images/tech3.jpg" alt="Bioremediation" />
-          <h3>Bioremediation</h3>
-        </div>
-        <div class="technology-item tilt" data-tilt data-tilt-max="15">
-          <img src="images/tech4.jpg" alt="Thermal Desorption" />
-          <h3>Thermal Desorption</h3>
+    <!-- Industries Section -->
+    <section
+      id="industries"
+      class="industries-section"
+      role="region"
+      aria-labelledby="industries-heading"
+    >
+      <div class="container">
+        <h2 id="industries-heading">Industries Impacted by PFAS</h2>
+        <!-- Swiper Carousel with more images -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Updated Slides with Interactive Overlays -->
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="industry-item">
+                <div class="industry-image-overlay">
+                  <img
+                    src="https://images.unsplash.com/photo-1581090460827-3f9c4c0f65e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwcGxhbnR8ZW58MHx8fHwxNjk2NjEwODUw&ixlib=rb-4.0.3&q=80&w=800"
+                    alt="Manufacturing Industry"
+                  />
+                  <div class="overlay">
+                    <h3>Industrial Manufacturing Plants</h3>
+                    <p>
+                      Soil and water leaching, air pollution from manufacturing
+                      processes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="industry-item">
+                <div class="industry-image-overlay">
+                  <img
+                    src="https://images.unsplash.com/photo-1580711133313-2fca52d41cc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTY2MTA5Mjg&ixlib=rb-4.0.3&q=80&w=800"
+                    alt="Electronic Manufacturing"
+                  />
+                  <div class="overlay">
+                    <h3>Electronic Manufacturing Plants</h3>
+                    <p>
+                      Soil and water leaching from electronic component
+                      production.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="industry-item">
+                <div class="industry-image-overlay">
+                  <img
+                    src="https://images.unsplash.com/photo-1572889441268-216c61e47b04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHx3YXN0ZXxlbnwwfHx8fDE2OTY2MTA5ODk&ixlib=rb-4.0.3&q=80&w=800"
+                    alt="Landfills"
+                  />
+                  <div class="overlay">
+                    <h3>Landfills</h3>
+                    <p>
+                      Soil and water leaching from disposed PFAS-containing
+                      products.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="industry-item">
+                <div class="industry-image-overlay">
+                  <img
+                    src="https://images.unsplash.com/photo-1599752920526-601a45e5cbd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxhaXJwb3J0fGVufDB8fHx8MTY5NjYxMTA1NQ&ixlib=rb-4.0.3&q=80&w=800"
+                    alt="Airports"
+                  />
+                  <div class="overlay">
+                    <h3>Airports</h3>
+                    <p>Soil and water contamination from firefighting foams.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add more slides as needed -->
+          </div>
+          <!-- Add Navigation -->
+          <div class="swiper-button-next" aria-label="Next Slide"></div>
+          <div class="swiper-button-prev" aria-label="Previous Slide"></div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination" aria-label="Carousel Pagination"></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Our Vision Section -->
-  <section
-    id="vision"
-    class="vision-section animated"
-    role="region"
-    aria-labelledby="vision-heading"
-  >
-    <div class="container">
-      <h2 id="vision-heading">Our Vision</h2>
-      <div class="vision-content">
-        <p>
-          Committed to a cleaner environment through innovative solutions for future generations.
-        </p>
-        <img src="images/vision.jpg" alt="Our Vision" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section
-    id="contact"
-    class="contact"
-    role="region"
-    aria-labelledby="contact-heading"
-  >
-    <div class="container">
-      <h2 id="contact-heading">Get in Touch</h2>
-      <div class="contact-info">
-        <p>Ready to make a change? Let's talk.</p>
-      </div>
-      <form
-        action="/submit"
-        method="post"
-        aria-labelledby="contact-form"
-        role="form"
+    <!-- Exposure Section -->
+    <section
+      id="exposure"
+      class="exposure-section"
+      role="region"
+      aria-labelledby="exposure-heading"
+    >
+      <div
+        class="exposure-background"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1503597660036-1d67203e443d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxwb2xsdXRpb258ZW58MHx8fHwxNjk2NjExMTQ1&ixlib=rb-4.0.3&q=80&w=1600');
+        "
       >
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            aria-required="true"
+        <div class="container">
+          <h2 id="exposure-heading">
+            Sources of Exposure and Long-Term Effects
+          </h2>
+          <div class="exposure-content">
+            <p>
+              PFAS chemicals are widely utilized across multiple industries and
+              have been shown to leach into our daily lives in many different
+              ways, directly impacting not just our communities, but our loved
+              ones.
+            </p>
+            <h3>Negative Health Effects:</h3>
+            <ul class="health-effects">
+              <!-- Replacing text with icons -->
+              <li>
+                <img
+                  src="https://images.unsplash.com/photo-1595433562696-673198798bc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxjYW5jZXJ8ZW58MHx8fHwxNjk2NjExMjE0&ixlib=rb-4.0.3&q=80&w=100"
+                  alt="Cancer Icon"
+                />
+                <span>Cancer</span>
+              </li>
+              <li>
+                <img
+                  src="https://images.unsplash.com/photo-1580281658620-24b743b1ba02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxob3Jtb25lJTIwZGlzb3JkZXJ8ZW58MHx8fHwxNjk2NjExMjcy&ixlib=rb-4.0.3&q=80&w=100"
+                  alt="Hormonal Disruption Icon"
+                />
+                <span>Hormonal Disruption</span>
+              </li>
+              <li>
+                <img
+                  src="https://images.unsplash.com/photo-1617302540162-81fd54ab8495?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxpbW11bmUlMjBzeXN0ZW18ZW58MHx8fHwxNjk2NjExMzI4&ixlib=rb-4.0.3&q=80&w=100"
+                  alt="Immune System Icon"
+                />
+                <span>Immune System Impacts</span>
+              </li>
+              <li>
+                <img
+                  src="https://images.unsplash.com/photo-1596557758701-80154e59b56d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHx0aHlyb2lkfGVufDB8fHx8MTY5NjYxMTM4MQ&ixlib=rb-4.0.3&q=80&w=100"
+                  alt="Thyroid Disease Icon"
+                />
+                <span>Thyroid Disease</span>
+              </li>
+              <!-- Add more health effects as needed -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section
+      id="process"
+      class="process-section animated"
+      role="region"
+      aria-labelledby="process-heading"
+    >
+      <div class="container">
+        <h2 id="process-heading">
+          Synergy's Process: From Problem to Solution
+        </h2>
+        <!-- Adding interactive timeline -->
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-img">
+              <img
+                src="https://images.unsplash.com/photo-1517544881781-94ba845af1bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxhc3Nlc3NtZW50fGVufDB8fHx8MTY5NjYxMTQyMg&ixlib=rb-4.0.3&q=80&w=600"
+                alt="Site Assessment"
+              />
+            </div>
+            <div class="timeline-content">
+              <h3>Step 1: Comprehensive Site Assessment</h3>
+              <!-- Collapsible content -->
+              <button class="accordion-button" aria-expanded="false">
+                <span>Learn More</span>
+              </button>
+              <div class="accordion-content">
+                <ul>
+                  <li>
+                    <strong>Initial Consultation:</strong> Collaborate with
+                    clients and local partners to thoroughly understand the
+                    specific contamination concerns.
+                  </li>
+                  <li>
+                    <strong>Site Surveys and Testing:</strong> Select and deploy
+                    advanced tools to assess the extent and nature of
+                    contamination.
+                  </li>
+                  <li>
+                    <strong>Data-Driven Analysis:</strong> Collect and analyze
+                    samples to identify the characteristics and distribution of
+                    PFAS compounds.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-img">
+              <img
+                src="https://images.unsplash.com/photo-1551836022-c30f89e2945e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxzb2x1dGlvbiUyMGRlc2lnbnxlbnwwfHx8fDE2OTY2MTE1MTU&ixlib=rb-4.0.3&q=80&w=600"
+                alt="Solution Design"
+              />
+            </div>
+            <div class="timeline-content">
+              <h3>Step 2: Customized Solution Design</h3>
+              <button class="accordion-button" aria-expanded="false">
+                <span>Learn More</span>
+              </button>
+              <div class="accordion-content">
+                <ul>
+                  <li>
+                    <strong>Tailored Remediation Plan:</strong> Develop a
+                    comprehensive remediation strategy based on assessment
+                    findings.
+                  </li>
+                  <li>
+                    <strong>Technology Integration:</strong> Leverage multiple
+                    technologies to create an optimal solution tailored to the
+                    site's unique needs.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Add more timeline items as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section
+      id="technologies"
+      class="technologies-section animated"
+      role="region"
+      aria-labelledby="technologies-heading"
+    >
+      <div class="container">
+        <h2 id="technologies-heading">
+          Our Unique Synergy of Technologies and Experts
+        </h2>
+        <!-- Replacing text with interactive cards -->
+        <div class="technology-cards">
+          <!-- Card 1 -->
+          <div class="technology-card tilt" data-tilt data-tilt-max="15">
+            <div class="card-front">
+              <img
+                src="https://images.unsplash.com/photo-1506487500167-421f0afaf47a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxHSVN8ZW58MHx8fHwxNjk2NjExNTc1&ixlib=rb-4.0.3&q=80&w=400"
+                alt="GIS Mapping"
+              />
+              <h3>GIS Mapping</h3>
+            </div>
+            <div class="card-back">
+              <p>
+                Visualizing and analyzing spatial data for precise site
+                assessment.
+              </p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="technology-card tilt" data-tilt data-tilt-max="15">
+            <div class="card-front">
+              <img
+                src="https://images.unsplash.com/photo-1522098754331-9f3c7d79744b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxmaWx0cmF0aW9ufGVufDB8fHx8MTY5NjYxMTYyMg&ixlib=rb-4.0.3&q=80&w=400"
+                alt="Advanced Filtration"
+              />
+              <h3>Advanced Filtration</h3>
+            </div>
+            <div class="card-back">
+              <p>
+                Removing contaminants using state-of-the-art filtration systems.
+              </p>
+            </div>
+          </div>
+          <!-- Add more technology cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- How We Protect You Section -->
+    <section
+      id="protection"
+      class="protection-section"
+      role="region"
+      aria-labelledby="protection-heading"
+    >
+      <div class="container">
+        <h2 id="protection-heading">How Synergy Protects You</h2>
+        <!-- Using icons to represent each point -->
+        <div class="protection-content">
+          <div class="protection-item">
+            <img
+              src="https://images.unsplash.com/photo-1559757175-570a9a70b5e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxkaXNjaXBsaW5lfGVufDB8fHx8MTY5NjYxMTY4OA&ixlib=rb-4.0.3&q=80&w=100"
+              alt="Efficiency Icon"
+            />
+            <h3>Efficiency</h3>
+            <p>
+              Synergy delivers cost-effective solutions without compromising
+              quality, ensuring that all project management processes meet
+              scheduled milestones.
+            </p>
+          </div>
+          <div class="protection-item">
+            <img
+              src="https://images.unsplash.com/photo-1579389083078-1ec76dd71c5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxjb21wbGlhbmNlfGVufDB8fHx8MTY5NjYxMTc1Nw&ixlib=rb-4.0.3&q=80&w=100"
+              alt="Compliance Icon"
+            />
+            <h3>Regulatory Compliance</h3>
+            <p>
+              We strictly adhere to EPA guidelines and comply with local and
+              national environmental regulations.
+            </p>
+          </div>
+          <!-- Add more protection items as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Vision Section -->
+    <section
+      id="vision"
+      class="vision-section animated"
+      role="region"
+      aria-labelledby="vision-heading"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1525983930841-dd142a74ae3d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxmdXR1cmV8ZW58MHx8fHwxNjk2NjExODI2&ixlib=rb-4.0.3&q=80&w=1600');
+      "
+    >
+      <div class="container">
+        <h2 id="vision-heading">Our Vision for the Future</h2>
+        <div class="vision-content">
+          <p>
+            Synergy is committed to a cleaner environment, driving innovative
+            solutions to tackle contamination for future generations.
+          </p>
+          <!-- Using a parallax background effect -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section
+      id="conclusion"
+      class="conclusion-section"
+      role="region"
+      aria-labelledby="conclusion-heading"
+    >
+      <div class="container">
+        <h2 id="conclusion-heading">Conclusion</h2>
+        <!-- Replacing text with a call-to-action image -->
+        <div class="conclusion-image">
+          <img
+            src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHx0YWtlJTIwYWN0aW9ufGVufDB8fHx8MTY5NjYxMTkwMA&ixlib=rb-4.0.3&q=80&w=800"
+            alt="Take Action"
           />
+          <div class="overlay-text">
+            <p>
+              Let's move beyond only thinking green and start taking action.
+            </p>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            aria-required="true"
-          />
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="contact"
+      role="region"
+      aria-labelledby="contact-heading"
+    >
+      <div class="container">
+        <h2 id="contact-heading">Get in Touch</h2>
+        <div class="contact-info">
+          <p>Ready to make a change? Let's talk.</p>
         </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            aria-required="true"
-          ></textarea>
-        </div>
-        <button type="submit" class="submit-btn" role="button">Submit</button>
-      </form>
-    </div>
-  </section>
+        <form
+          action="/submit"
+          method="post"
+          aria-labelledby="contact-form"
+          role="form"
+        >
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              aria-required="true"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              aria-required="true"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              aria-required="true"
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-btn" role="button">Submit</button>
+        </form>
+      </div>
+    </section>
 
-  <!-- Back to Top Button -->
-  <a href="#" class="back-to-top">↑</a>
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">↑</a>
 
-  <!-- Footer Section -->
-  <footer class="main-footer" role="contentinfo">
-    <div class="container">
-      <nav aria-label="Footer navigation">
-        <ul>
-          <li><a href="#introduction">Introduction</a></li>
-          <li><a href="#pfas">About PFAS</a></li>
-          <li><a href="#industries">Industries</a></li>
-          <li><a href="#process">Our Process</a></li>
-          <li><a href="#technologies">Technologies</a></li>
-          <li><a href="#vision">Our Vision</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <p>&copy; 2024 Synergy Conversion. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Include JavaScript File -->
-  <script src="js/app.js"></script>
-
-</body>
+    <!-- Footer Section -->
+    <footer class="main-footer" role="contentinfo">
+      <div class="container">
+        <nav aria-label="Footer navigation">
+          <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#pfas">About PFAS</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#exposure">Exposure</a></li>
+            <li><a href="#process">Our Process</a></li>
+            <li><a href="#technologies">Technologies</a></li>
+            <li><a href="#protection">How We Protect You</a></li>
+            <li><a href="#vision">Our Vision</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <p>&copy; 2024 Synergy Conversion. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>

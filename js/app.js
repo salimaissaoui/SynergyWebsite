@@ -316,3 +316,21 @@ contactForm.addEventListener("submit", (e) => {
   alert("Thank you for contacting us!");
   contactForm.reset();
 });
+
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", () => {
+  const header = document.querySelector(".main-header");
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    // Scrolling down - hide the header
+    header.classList.add("hidden");
+  } else {
+    // Scrolling up - show the header
+    header.classList.remove("hidden");
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or Negative Scrolling
+});
+

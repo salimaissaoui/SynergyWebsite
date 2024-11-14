@@ -166,34 +166,25 @@ html {
   color: #fff;
 }
 
-.hover-effect-container {
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   z-index: -1;
 }
 
-.default-image,
-.hover-image {
-  width: 100%;
-  height: 100%;
+.hero::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  object-fit: cover;
-  transition: opacity 0.3s ease;
-}
-
-.hover-image {
-  clip-path: circle(0% at 0 0);
-  pointer-events: none;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35); /* Base dark overlay */
+  z-index: 1;
 }
 
 .hero::after {
@@ -203,22 +194,40 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.8) 20%, /* Dark square size */
+      transparent 20%, 
+      transparent 60%, /* Spacing */
+      rgba(0, 0, 0, 0.8) 100% /* Next square start */
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8) 20%, /* Dark square size */
+      transparent 20%, 
+      transparent 60%, /* Spacing */
+      rgba(0, 0, 0, 0.8) 60% /* Next square start */
+    );
+  background-size: 3px 3px; /* Size of the halftone squares */
+  opacity: 0.8; /* Control the intensity of the effect */
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .hero h1 {
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 20px;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
   font-size: 1.8rem;
   margin-bottom: 40px;
-  font-weight: 300;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .cta-btn {
@@ -239,6 +248,7 @@ html {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
+
 /* Scroll Down Indicator */
 .scroll-indicator {
   position: absolute;
@@ -248,7 +258,6 @@ html {
   font-size: 2rem;
   color: #fff;
   animation: bounce 2s infinite;
-  z-index: 2;
 }
 
 @keyframes bounce {
@@ -266,6 +275,57 @@ html {
     transform: translateX(-50%) translateY(-10px);
   }
 }
+/* What We Are Offering Section */
+.what-we-are-offering {
+  position: relative;
+  background-image: url("../images/environmental_consulting_services-min-1-e1670834983953.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  color: #fff;
+  min-height: 500px;
+  display: flex;
+  align-items: center; /* Vertically center content */
+}
+
+.what-we-are-offering::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* Cover the left half */
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.9),
+    rgba(153, 233, 62, 0.1)
+  ); /* Subtle gradient */
+  z-index: 1;
+}
+
+.what-we-are-offering .container {
+  position: relative;
+  z-index: 2;
+  max-width: 600px; /* Control the text width */
+  margin-left: 40px; /* Add spacing from the left */
+}
+
+.what-we-are-offering h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2a5d41;
+  text-align: left;
+}
+
+.what-we-are-offering p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: left;
+}
+
+
+
 
 /* Combined Styling for Introduction and PFAS Sections */
 .intro-pfas-section {
@@ -329,57 +389,75 @@ html {
 
 /* Industries Section */
 .industries-section {
-  padding: 60px 20px;
-  background-color: #f8f9fa;
-  color: #333;
   text-align: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  position: relative;
 }
 
 .industries-section h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #2a5d41;
+  color: #333;
 }
 
-.industry-box-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.scroll-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll-container {
+  display: flex;
   gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  animation: scroll-sideways 20s linear infinite;
+  width: max-content; /* Adjust to fit the content dynamically */
+}
+
+@keyframes scroll-sideways {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .industry-box {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  background: #fff;
+  border-radius: 10px;
   padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .industry-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .industry-icon img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   margin-bottom: 15px;
 }
 
 .industry-box h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
   color: #2a5d41;
 }
 
 .industry-box p {
   font-size: 1rem;
+  line-height: 1.5;
   color: #555;
-  line-height: 1.6;
 }
+
 
 /* Exposure Section */
 .exposure-section {
@@ -491,8 +569,11 @@ html {
 
 .timeline-img img {
   width: 100%;
+  height: 400px; /* Fixed height for all images */
+  object-fit: cover; /* Ensures the image fills the area while maintaining aspect ratio */
   border-radius: 10px;
 }
+
 
 .timeline-content {
   background: #fff;

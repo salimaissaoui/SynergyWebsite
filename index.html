@@ -88,34 +88,48 @@
     </header>
 
     <!-- Hero Section -->
-    <section
-      class="hero"
-      role="region"
-      aria-label="Hero section with introduction and call to action"
-    >
-      <!-- Particle Background -->
-      <div id="particles-js"></div>
-      <!-- Hero Background Image with Hover Effect -->
-      <div class="hover-effect-container">
-        <img
-          src="https://images.unsplash.com/photo-1532153665699-24f5b07f2ce3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGVudmlyb25tZW50fGVufDB8fHx8MTY5NjYxMDM1OQ&ixlib=rb-4.0.3&q=80&w=1600"
-          alt="Hero Background"
-          class="default-image"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1504593811423-6dd665756598?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc5MjB8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5fGVufDB8fHx8MTY5NjYxMDQ0Mw&ixlib=rb-4.0.3&q=80&w=1600"
-          alt="Alternate Hero Background"
-          class="hover-image"
-        />
-      </div>
-      <div class="hero-content">
-        <h1>Comprehensive PFAS Remediation Solutions</h1>
-        <p class="typewriter"><span id="typewriter-text"></span></p>
-        <a href="#contact" class="cta-btn" role="button">Get Started</a>
-      </div>
-      <!-- Scroll Indicator -->
-      <div class="scroll-indicator">&darr;</div>
-    </section>
+<section
+class="hero"
+role="region"
+aria-label="Hero section with introduction and call to action"
+>
+<!-- Video Background -->
+<video class="hero-video" autoplay loop muted playsinline>
+  <source src="images\231639.mp4" type="video/mp4" />
+  <source src="path/to/your-video.webm" type="video/webm" />
+  <!-- Fallback message -->
+  Your browser does not support HTML5 video.
+</video>
+
+<!-- Hero Content -->
+<div class="hero-content">
+  <h1>Comprehensive PFAS Remediation Solutions</h1>
+  <p class="typewriter"><span id="typewriter-text"></span></p>
+  <a href="#contact" class="cta-btn" role="button">Get Started</a>
+</div>
+
+<!-- Scroll Indicator -->
+<div class="scroll-indicator">&darr;</div>
+</section>
+
+<!-- What We Are Offering Section -->
+<section
+  class="what-we-are-offering"
+  role="region"
+  aria-labelledby="offering-heading"
+>
+  <div class="container">
+    <h2 id="offering-heading">What We Are Offering</h2>
+    <p>
+      Synergy Conversion provides cutting-edge environmental consulting and PFAS
+      remediation services. Our innovative approach ensures effective solutions
+      for complex contamination challenges, helping industries transition
+      towards sustainability.
+    </p>
+  </div>
+</section>
+
+
 
     <!-- Introduction Section -->
     <section
@@ -125,7 +139,7 @@
       aria-labelledby="introduction-heading"
     >
       <div class="container">
-        <h2 id="introduction-heading">Introduction to Synergy Conversion</h2>
+        <h2 id="introduction-heading">WHAT SYNERGY MEANS</h2>
         <div class="content">
           <p>
             The term <strong>“synergy”</strong> refers to the powerful effect
@@ -195,16 +209,18 @@
     </section>
 
     <!-- Industries Section -->
-    <section
-    id="industries"
-    class="industries-section"
-    role="region"
-    aria-labelledby="industries-heading"
-  >
-    <div class="container">
-      <h2 id="industries-heading">Industries Impacted by PFAS</h2>
-      <!-- Icon-based industry boxes -->
-      <div class="industry-box-grid">
+<!-- Industries Section -->
+<section
+  id="industries"
+  class="industries-section"
+  role="region"
+  aria-labelledby="industries-heading"
+>
+  <div class="container">
+    <h2 id="industries-heading">Industries Impacted by PFAS</h2>
+    <!-- Scrollable Container -->
+    <div class="scroll-wrapper">
+      <div class="scroll-container">
         <!-- Box 1 -->
         <div class="industry-box">
           <div class="industry-icon">
@@ -245,9 +261,23 @@
             Soil and water contamination from firefighting foams.
           </p>
         </div>
+        <!-- Duplicate boxes for seamless scrolling -->
+        <!-- Box 1 -->
+        <div class="industry-box">
+          <div class="industry-icon">
+            <img src="images/factory.png" alt="Manufacturing Icon" />
+          </div>
+          <h3>Industrial Manufacturing Plants</h3>
+          <p>
+            Soil and water leaching, air pollution from manufacturing processes.
+          </p>
+        </div>
+        <!-- Add more boxes if needed -->
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
   
 
     <!-- Exposure Section -->
@@ -303,87 +333,106 @@
       </div>
     </section>
 
-    <!-- Our Process Section -->
-    <section
-      id="process"
-      class="process-section animated"
-      role="region"
-      aria-labelledby="process-heading"
-    >
-      <div class="container">
-        <h2 id="process-heading">
-          Synergy's Process: From Problem to Solution
-        </h2>
-        <!-- Adding interactive timeline -->
-        <div class="timeline">
-          <!-- Timeline Item 1 -->
-          <div class="timeline-item">
-            <div class="timeline-img">
-              <img
-                src="images\thisisengineering-df7erzy97sg-unsplash.jpg"
-                alt="Site Assessment"
-              />
-            </div>
-            <div class="timeline-content">
-              <h3>Step 1: Comprehensive Site Assessment</h3>
-              <!-- Collapsible content -->
-              <button class="accordion-button" aria-expanded="false">
-                <span>Learn More</span>
-              </button>
-              <div class="accordion-content">
-                <ul>
-                  <li>
-                    <strong>Initial Consultation:</strong> Collaborate with
-                    clients and local partners to thoroughly understand the
-                    specific contamination concerns.
-                  </li>
-                  <li>
-                    <strong>Site Surveys and Testing:</strong> Select and deploy
-                    advanced tools to assess the extent and nature of
-                    contamination.
-                  </li>
-                  <li>
-                    <strong>Data-Driven Analysis:</strong> Collect and analyze
-                    samples to identify the characteristics and distribution of
-                    PFAS compounds.
-                  </li>
-                </ul>
-              </div>
-            </div>
+<!-- Synergy's Process Section -->
+<section
+  id="process"
+  class="process-section animated"
+  role="region"
+  aria-labelledby="process-heading"
+>
+  <div class="container">
+    <h2 id="process-heading">Synergy's Process: From Problem to Solution</h2>
+    <div class="timeline">
+      <!-- Step 1 -->
+      <div class="timeline-item">
+        <div class="timeline-img">
+          <img
+            src="https://images.pexels.com/photos/8961300/pexels-photo-8961300.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Site Assessment"
+          />
+        </div>
+        <div class="timeline-content">
+          <h3>Step 1: Comprehensive Site Assessment</h3>
+          <button class="accordion-button" aria-expanded="false">Learn More</button>
+          <div class="accordion-content">
+            <ul>
+              <li>Collaborate with clients to understand contamination concerns.</li>
+              <li>Deploy advanced tools to assess contamination extent.</li>
+              <li>Collect and analyze samples to identify PFAS compounds.</li>
+            </ul>
           </div>
-          <!-- Timeline Item 2 -->
-          <div class="timeline-item">
-            <div class="timeline-img">
-              <img
-                src="images\parabol-the-agile-meeting-tool-VWLCR5Bt4fc-unsplash.jpg"
-                alt="Solution Design"
-              />
-            </div>
-            <div class="timeline-content">
-              <h3>Step 2: Customized Solution Design</h3>
-              <button class="accordion-button" aria-expanded="false">
-                <span>Learn More</span>
-              </button>
-              <div class="accordion-content">
-                <ul>
-                  <li>
-                    <strong>Tailored Remediation Plan:</strong> Develop a
-                    comprehensive remediation strategy based on assessment
-                    findings.
-                  </li>
-                  <li>
-                    <strong>Technology Integration:</strong> Leverage multiple
-                    technologies to create an optimal solution tailored to the
-                    site's unique needs.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- Add more timeline items as needed -->
         </div>
       </div>
-    </section>
+      
+      <!-- Step 2 -->
+      <div class="timeline-item">
+        <div class="timeline-img">
+          <img
+            src="https://images.pexels.com/photos/28196491/pexels-photo-28196491/free-photo-of-construction-supervisor.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Solution Design"
+          />
+        </div>
+        <div class="timeline-content">
+          <h3>Step 2: Customized Solution Design</h3>
+          <button class="accordion-button" aria-expanded="false">
+            <span>Learn More</span>
+          </button>
+          <div class="accordion-content">
+            <ul>
+              <li>Develop a remediation strategy tailored to site needs.</li>
+              <li>Leverage multiple technologies for an optimal solution.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Step 3 -->
+      <div class="timeline-item">
+        <div class="timeline-img">
+          <img
+            src="https://images.pexels.com/photos/17485683/pexels-photo-17485683/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-illustration-depicts-how-ai-could-be-used-in-the-field-of-sustainability-from-biodiversity-to-climate-it-was-created-by-nidi.png?auto=compress&cs=tinysrgb&w=600"
+            alt="Action Plan and Implementation"
+          />
+        </div>
+        <div class="timeline-content">
+          <h3>Step 3: Action Plan and Implementation</h3>
+          <button class="accordion-button" aria-expanded="false">
+            <span>Learn More</span>
+          </button>
+          <div class="accordion-content">
+            <ul>
+              <li><strong>Clear Roadmap:</strong> Formulate a detailed action plan for remediation, ensuring minimal disruption to local operations.</li>
+              <li><strong>On-Site Execution:</strong> Implement the plan through a systematic approach, deploying filtration systems and chemical treatments as required.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Step 4 -->
+      <div class="timeline-item">
+        <div class="timeline-img">
+          <img
+            src="https://images.pexels.com/photos/10508800/pexels-photo-10508800.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Long-Term Monitoring and Support"
+          />
+        </div>
+        <div class="timeline-content">
+          <h3>Step 4: Long-Term Monitoring and Support</h3>
+          <button class="accordion-button" aria-expanded="false">
+            <span>Learn More</span>
+          </button>
+          <div class="accordion-content">
+            <ul>
+              <li><strong>Post-Remediation Monitoring:</strong> Continuously track site conditions and water/soil quality to ensure sustained safety.</li>
+              <li><strong>Ongoing Consultation:</strong> Provide ongoing support and make necessary adjustments to maintain environmental compliance.</li>
+              <li><strong>Problem Resolution Implementation:</strong> Deploy one or more technologies to mitigate the risk of future PFAS contamination.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+</section>
+
 
 
 

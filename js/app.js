@@ -280,22 +280,25 @@ var swiper = new Swiper(".swiper-container", {
   },
 });
 
-// Accordion Functionality (Updated to handle multiple accordions)
-const accordionButtons = selectAll(".accordion-button");
-
-accordionButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const expanded = button.getAttribute("aria-expanded") === "true";
-    button.setAttribute("aria-expanded", !expanded);
-
+document.querySelectorAll('.accordion-button').forEach((button) => {
+  button.addEventListener('click', () => {
     const content = button.nextElementSibling;
-    if (!expanded) {
-      content.style.maxHeight = content.scrollHeight + "px";
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+    // Toggle accordion content visibility
+    if (isExpanded) {
+      content.style.maxHeight = null; // Collapse
+      button.setAttribute('aria-expanded', 'false');
     } else {
-      content.style.maxHeight = 0;
+      content.style.maxHeight = content.scrollHeight + 'px'; // Expand
+      button.setAttribute('aria-expanded', 'true');
     }
   });
 });
+
+
+
+
 // Back to Top Button Functionality
 const backToTopBtn = select(".back-to-top");
 

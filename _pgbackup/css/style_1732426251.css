@@ -41,7 +41,7 @@ html {
 }
 
 .main-header.scrolled {
-    background-color:#16964f;
+    background-color: rgba(111, 172, 42, 0.95);
 
     /* Light green when scrolled */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -272,112 +272,83 @@ html {
 }
 
 .what-we-are-offering {
-    position: relative;
-    background: linear-gradient(to bottom right, #ffffff, #ffffff);
-    padding: 80px 20px;
-    color: #333;
+  position: relative;
+  background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
+  padding: 80px 20px;
+  color: #333;
 }
 
 .what-we-are-offering .container {
-    background: #fff;
-    border-radius: 16px;
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    /* Two-column layout */
-    gap: 20px;
-    align-items: center;
-
-    /* Center items vertically */
-    color: #333;
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two-column layout */
+  gap: 20px;
+  align-items: center; /* Center items vertically */
+  color: #333;
 }
 
 @media (max-width: 768px) {
-    .what-we-are-offering .container {
-        grid-template-columns: 1fr;
-
-        /* Stack on smaller screens */
-    }
+  .what-we-are-offering .container {
+      grid-template-columns: 1fr; /* Stack on smaller screens */
+  }
 }
 
 .what-we-are-offering .image {
-    grid-column: 1;
-
-    /* Place image in the first column */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  grid-column: 1; /* Place image in the first column */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .what-we-are-offering .image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 16px;
-    box-shadow: -60px 60px 0px -20px #F2F2F2;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: -60px 60px 0px -20px #F2F2F2;
 }
 
 .what-we-are-offering .image::before {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
-    background: linear-gradient(135deg, rgba(22, 150, 79, 0.2), rgba(255, 255, 255, 0));
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(22, 150, 79, 0.2), rgba(255, 255, 255, 0));
+  z-index: -1;
 }
 
 .what-we-are-offering .text {
-    grid-column: 2;
-
-    /* Place text in the second column */
-    display: flex;
-    flex-direction: column;
-
-    /* Stack content vertically */
-    justify-content: flex-start;
-
-    /* Start content at the top */
-    gap: 20px;
-
-    /* Space between items */
-    /* Adjust or remove the padding-top to move the title higher */
-    padding-top: 0;
-
-    /* Set to zero to align the title higher */
+  grid-column: 2; /* Place text in the second column */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: flex-start; /* Start content at the top */
+  gap: 20px; /* Space between items */
+  /* Adjust or remove the padding-top to move the title higher */
+  padding-top: 0; /* Set to zero to align the title higher */
 }
 
+
 .what-we-are-offering .text h2 {
-    font-size: 2.8rem;
-    color: #16964f;
-    margin-bottom: -10px;
-
-    /* Add spacing below the title */
-    text-align: center;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    height: 131px;
-    width: 422px;
-    padding-left: 107px;
-
-    /* Ensure title aligns left */
+  font-size: 2.8rem;
+  color: #16964f;
+  margin-bottom: 10px; /* Add spacing below the title */
+  text-align: left; /* Ensure title aligns left */
 }
 
 .what-we-are-offering .text p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #555;
-    text-align: center;
-    padding-bottom: 8px;
-    padding-left: 0px;
-
-    /* Align text to the left for consistency */
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: left; /* Align text to the left for consistency */
 }
+
 
 /* General Section Styling */
 .intro-pfas-section {
@@ -880,7 +851,6 @@ html {
 
     /* White text on hover */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    background-image: url(https://enersavings.com/wp-content/uploads/2022/05/lines-background-2.svg);
 }
 
 .phase-box h3,

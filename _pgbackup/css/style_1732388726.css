@@ -41,7 +41,7 @@ html {
 }
 
 .main-header.scrolled {
-    background-color:#16964f;
+    background-color: rgba(111, 172, 42, 0.95);
 
     /* Light green when scrolled */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -255,10 +255,10 @@ html {
 
 @keyframes bounce {
     0%,
-    20%,
-    50%,
-    80%,
-    100% {
+      20%,
+      50%,
+      80%,
+      100% {
         transform: translateX(-50%) translateY(0);
     }
 
@@ -271,112 +271,96 @@ html {
     }
 }
 
+/* What We Are Offering Section */
 .what-we-are-offering {
     position: relative;
-    background: linear-gradient(to bottom right, #ffffff, #ffffff);
-    padding: 80px 20px;
-    color: #333;
-}
-
-.what-we-are-offering .container {
-    background: #fff;
-    border-radius: 16px;
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    /* Two-column layout */
-    gap: 20px;
-    align-items: center;
-
-    /* Center items vertically */
-    color: #333;
-}
-
-@media (max-width: 768px) {
-    .what-we-are-offering .container {
-        grid-template-columns: 1fr;
-
-        /* Stack on smaller screens */
-    }
-}
-
-.what-we-are-offering .image {
-    grid-column: 1;
-
-    /* Place image in the first column */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.what-we-are-offering .image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 16px;
-    box-shadow: -60px 60px 0px -20px #F2F2F2;
-}
-
-.what-we-are-offering .image::before {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
-    background: linear-gradient(135deg, rgba(22, 150, 79, 0.2), rgba(255, 255, 255, 0));
-    z-index: -1;
-}
-
-.what-we-are-offering .text {
-    grid-column: 2;
-
-    /* Place text in the second column */
+    background-image: url("../images/environmental_consulting_services-min-1-e1670834983953.webp");
+    background-size: cover;
+    background-position: center;
+    padding: 120px 40px;
+    color: #fff;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
 
     /* Stack content vertically */
-    justify-content: flex-start;
-
-    /* Start content at the top */
-    gap: 20px;
-
-    /* Space between items */
-    /* Adjust or remove the padding-top to move the title higher */
-    padding-top: 0;
-
-    /* Set to zero to align the title higher */
+    justify-content: center;
+    text-align: left;
 }
 
-.what-we-are-offering .text h2 {
-    font-size: 2.8rem;
-    color: #16964f;
-    margin-bottom: -10px;
+.what-we-are-offering::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 
-    /* Add spacing below the title */
-    text-align: center;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    height: 131px;
-    width: 422px;
-    padding-left: 107px;
+    /* Full width overlay */
+    height: 100%;
+    background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.1)
+  );
 
-    /* Ensure title aligns left */
+    /* Dark gradient for better text readability */
+    z-index: 1;
 }
 
-.what-we-are-offering .text p {
+.what-we-are-offering .container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+
+    /* Increased text width for readability */
+    margin: 0 auto;
+
+    /* Center the container */
+    text-align: left;
+}
+
+.what-we-are-offering h2 {
+    font-size: 3rem;
+
+    /* Larger for emphasis */
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+    /* Add text shadow for contrast */
+}
+
+.what-we-are-offering p {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #555;
-    text-align: center;
-    padding-bottom: 8px;
-    padding-left: 0px;
+    color: #f5f5f5;
 
-    /* Align text to the left for consistency */
+    /* Slightly lighter text color for readability */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+
+    /* Add text shadow for contrast */
+}
+
+.what-we-are-offering button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: #16964f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.what-we-are-offering button:hover {
+    background-color: #11763d;
+    transform: scale(1.05);
+
+    /* Slight zoom effect */
 }
 
 /* General Section Styling */
@@ -676,7 +660,7 @@ html {
 }
 
 .card-front,
-.card-back {
+.card-back {
     width: 100%;
     backface-visibility: hidden;
     border-radius: 10px;
@@ -841,18 +825,6 @@ html {
     margin-top: 40px;
 }
 
-.future-vision-section .phases > * {
-    flex: 1 1 calc(50% - 30px);
-
-    /* Two boxes per row, accounting for gap */
-    max-width: calc(50% - 30px);
-
-    /* Ensure no box grows larger than half the container width */
-    box-sizing: border-box;
-
-    /* Includes padding and border in size calculation */
-}
-
 .phase-box {
     background: #fff;
     border-radius: 12px;
@@ -880,18 +852,17 @@ html {
 
     /* White text on hover */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    background-image: url(https://enersavings.com/wp-content/uploads/2022/05/lines-background-2.svg);
 }
 
 .phase-box h3,
-.phase-box p {
+.phase-box p {
     transition: color 0.3s ease;
 
     /* Smooth transition for text color */
 }
 
 .phase-box:hover h3,
-.phase-box:hover p {
+.phase-box:hover p {
     color: #fff;
 
     /* White text */
@@ -968,15 +939,15 @@ html {
 
 /* Ensure text and icon are above the wave */
 .phase-box h3,
-.phase-box p,
-.phase-box .phase-icon {
+.phase-box p,
+.phase-box .phase-icon {
     position: relative;
     z-index: 2;
 }
 
 /* Applying Elementor-Specific Styling */
 .elementor-1470 .elementor-element.elementor-element-274293e:not(.elementor-motion-effects-element-type-background),
-.elementor-1470 .elementor-element.elementor-element-274293e > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+.elementor-1470 .elementor-element.elementor-element-274293e > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     background: #fff;
 
     /* Background color for the boxes */
@@ -1144,7 +1115,7 @@ html {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea {
     width: 100%;
     padding: 15px;
     border: 1px solid #ddd;
@@ -1155,7 +1126,7 @@ html {
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus {
     border-color: #2a5d41;
     outline: none;
     box-shadow: 0 0 0 3px rgba(42, 93, 65, 0.1);
@@ -1182,8 +1153,8 @@ html {
 
 /* Footer Section */
 .main-footer {
-    background-color: #16964f;
-    color: #ebebeb;
+    background-color: rgba(120, 185, 46, 0.95);
+    color: #fff;
     padding: 20px 0;
 }
 
@@ -1327,7 +1298,7 @@ section h2 {
     }
 
     .about-us p,
-    .vision-section p {
+      .vision-section p {
         font-size: 1.2rem;
     }
 
@@ -1341,37 +1312,37 @@ section h2 {
     }
 
     .pfas-content,
-    .pfas-statistics,
-    .process-steps,
-    .protection-content,
-    .timeline,
-    .technology-cards {
+      .pfas-statistics,
+      .process-steps,
+      .protection-content,
+      .timeline,
+      .technology-cards {
         flex-direction: column;
         align-items: center;
     }
 
     .pfas-text,
-    .pfas-image,
-    .stat-item,
-    .process-step,
-    .protection-item,
-    .timeline-item,
-    .technology-card {
+      .pfas-image,
+      .stat-item,
+      .process-step,
+      .protection-item,
+      .timeline-item,
+      .technology-card {
         max-width: 100%;
         width: 100%;
     }
 
     .pfas-image,
-    .process-step img,
-    .vision-section img {
+      .process-step img,
+      .vision-section img {
         margin-top: 30px;
     }
 
     .stat-item,
-    .process-step,
-    .protection-item,
-    .timeline-item,
-    .technology-card {
+      .process-step,
+      .protection-item,
+      .timeline-item,
+      .technology-card {
         margin: 15px 0;
     }
 
@@ -1386,7 +1357,7 @@ section h2 {
     }
 
     .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even) {
+      .timeline-item:nth-child(even) {
         left: 0;
         text-align: left;
     }
@@ -1431,11 +1402,11 @@ section h2 {
 
 /* Improved Typography */
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     line-height: 1.2;
 }
@@ -1460,9 +1431,9 @@ p {
 
 /* Focus styles for better keyboard navigation */
 a:focus,
-button:focus,
-input:focus,
-textarea:focus {
+button:focus,
+input:focus,
+textarea:focus {
     outline: 3px solid #ffb74d;
     outline-offset: 2px;
 }
@@ -1479,14 +1450,14 @@ textarea:focus {
     }
 
     .about-us,
-    .process-section,
-    .vision-section {
+      .process-section,
+      .vision-section {
         background-color: #2a2a2a;
     }
 
     .industries-section,
-    .technologies-section,
-    .contact {
+      .technologies-section,
+      .contact {
         background-color: #222;
     }
 
@@ -1495,14 +1466,14 @@ textarea:focus {
     }
 
     .form-group input,
-    .form-group textarea {
+      .form-group textarea {
         background-color: #333;
         color: #f0f0f0;
         border-color: #444;
     }
 
     .form-group input:focus,
-    .form-group textarea:focus {
+      .form-group textarea:focus {
         border-color: #ffb74d;
     }
 }
@@ -1541,7 +1512,7 @@ textarea:focus {
 }
 
 .close:hover,
-.close:focus {
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;

@@ -1,3 +1,4 @@
+
 // Utility function for DOM element selection
 const select = (selector) => document.querySelector(selector);
 const selectAll = (selector) => document.querySelectorAll(selector);
@@ -336,4 +337,46 @@ window.addEventListener("scroll", () => {
 
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or Negative Scrolling
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".main-header");
+
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY; // Get current scroll position
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight; // Total scrollable height
+    const scrollPercent = (scrollPosition / documentHeight) * 100; // Scroll percentage
+
+    // Adjust header height based on scroll percentage
+    if (scrollPercent > 95) {
+      header.style.height = "100px"; // Expand header near the top
+    } else {
+      const newHeight = 70 + (30 * (1 - scrollPercent / 95));
+      header.style.height = `${Math.max(newHeight, 70)}px`; // Gradually change height (minimum 70px)
+    }
+  });
+});
+
+function smoothScrolls(event) {
+  event.preventDefault(); // Prevent default anchor behavior
+
+  // Get the target element from the href attribute
+  const targetId = event.target.getAttribute('href').slice(1);
+  const targetElement = document.getElementById(targetId);
+
+  // Check if the target element exists
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  } else {
+    console.error(`Element with ID "${targetId}" not found.`);
+  }
+}
+
+// Attach event listeners to anchor elements
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', smoothScrolls);
+});
+
 
